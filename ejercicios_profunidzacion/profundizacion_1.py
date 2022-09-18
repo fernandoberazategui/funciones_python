@@ -1,8 +1,8 @@
-# Funciones [Python]
+# Bucles [Python]
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
-# Version: 2.2
+# Version: 2.0
 
 # NOTA: 
 # Estos ejercicios son de mayor dificultad que los de clase y práctica.
@@ -12,61 +12,40 @@
 
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
 
-# Ejercicios con funciones y módulos
-import random
-
 '''
 Enunciado:
-Alumno: Crear la función "lista_aleatoria"
-
-Para este ejercicio utilizaremos el módulo random
-Ejemplo de como obtener un numero aleatorio
-entre inicio y fin
-inicio <= numero <= fin
-numero = random.randint(inicio, fin)
-
-NOTA: Esta función ya se utilizó en uno de los ejemplos de coase
-Documentación oficial de random
-https://docs.python.org/3.7/library/random.html
-
-Realice una funcion llamada "lista_aleatoria" (fuera del blocke main)
-la cual reciba como parámetro el rango de aceptación de la lista
-"inicio y fin" y la cantidad de elementos que deseamos que
-contenga la lista, es decir, la cantidad de elementos random a generar.
-
-def lista_aleatoria (inicio, fin, cantidad)
-
-Para ello dentro de la función deberá realizar un bucle que repita "cantidad"
-veces esta operacion:
-numero = random.randint(inicio, fin)
-
-Cada valor generado lo debe guardar en una lista, recuerde:
-1) Iniciar y crear esa lista vacia.
-2) Para agregar nuevos elementos en la lista utiliza "append"
-
-Finalmente dicha función debe retornar la lista de elementos random generados.
+Realice un programa que pida por consola dos números que representen
+el principio y fin de una secuencia numérica.
+Realizar un bucle "for" que recorra esa secuencia armada con "range"
+y cuente cuantos números ingresados hay, y la sumatoria de todos los números.
+Al finalizar el bucle, utilice la variable "cantidad_numeros" y la variable
+"sumatoria" para calcular el promedio de todos los números ingresados.
+Tener en cuenta que "range" no incluye el número de "fin" en su secuencia,
+sino que va hasta el anterior.
 '''
 
-# --------------------------------
-# Aquí dentro definir la función lista_aleatoria
+print('Comenzamos a ponernos serios!')
+# Empezar aquí la resolución del ejercicio
+
+inicio = int(input("ingrese numero de inicio de secuencia:\n")) # inicio = ....
+
+fin = int(input("ingrese numero de fin de secuencia:\n")) # fin = ....
+x=0
+sumatoria = 0
+
+for nros in range(inicio, fin+1):
+    x += 1
+    sumatoria += nros
+promedio=sumatoria/x
+print("La cantidad de numeros ingresados es: {}, la sumatoria de todos los numeros ingresados es: {}, el promedio de todos los numeros de la lista es: {}".format(x,sumatoria,promedio))
 
 
-# --------------------------------
+# cantidad_numeros ....
+# sumatoria ....
 
-if __name__ == '__main__':
-    print("Bienvenidos a otra clase de Inove con Python")
-    
-    inicio = 0
-    fin = 10
-    cantidad = 5
+# bucle.....
 
-    # Alumno: Luego de crear la función invocarla en este lugar:
+# Al terminar el bucle calcular el promedio como:
+# promedio = sumatoria / cantidad_numeros
 
-    # mi_lista_aleatoria = lista_aleatoria(inicio, fin, cantidad)
-
-    # Imprimir en pantalla "mi_lista_aleatoria" que tendrá
-    # los valores retornado por la función lista_aleatoria:
-
-    # print(mi_lista_aleatoria)
-
-    print("terminamos")
+# Imprimir resultado en pantalla

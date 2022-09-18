@@ -1,41 +1,25 @@
-# Funciones [Python]
+# Bucles [Python]
 # Ejercicios de práctica
 
 # Autor: Inove Coding School
-# Version: 2.2
+# Version: 2.0
 
 # IMPORTANTE: NO borrar los comentarios
 # que aparecen en verde con el hashtag "#"
 
-# Ejercicios con funciones
+# Ejemplos con bucles "for"
 
-# --------------------------------
-# Aquí dentro definir la función ordenar
-# def ordenar(lista):
+# Dado la siguiente lista de números, utilizar "for"
+# para recorrer toda la lista y realizar la sumatoria de todos los números
+# La sumatoria se deberá ir guardando en la variable "suma"
+numeros = [1, 5, -1, 6, 10, 2, -5]
+suma = 0   # Variable ya inicializada, la suma arranca en cero
 
-# --------------------------------
+for nros in numeros:
+    suma += nros
+    print ("para el nro", nros, " la sumatoria es", suma)
 
 
-if __name__ == '__main__':
-    print("Bienvenidos a otra clase de Inove con Python")
-    
-    numeros = [2, 4, 10, 8, 12, 6]
 
-    # Alumno: Crear la función "ordenar"
 
-    # Generar una una nueva funcion que se llame "ordenar",
-    # que utilizaremos para odernar la lista de numeros.
-    # Debe recibir 1 parámetro que es la lista de números
-    # y retornar la nueva lista ordenada (igual a lo visto en clase)
-
-    # Dentro de la función puede ordenar la lista
-    # usando la funciones nativas de Python "sorted"
-
-    # Luego de crear la función invocarla en este lugar:
-
-    # lista_ordenada = ordenar(numeros)
-
-    # Imprimir en pantalla "lista_ordenada" que tendrá
-    # los valores retornado por la función ordenar:
-
-    print("terminamos")
+print("terminamos!, el resultado final almacenado en suma debe ser 18")

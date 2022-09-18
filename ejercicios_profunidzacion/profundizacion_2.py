@@ -1,8 +1,8 @@
-# Funciones [Python]
+# Bucles [Python]
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
-# Version: 2.2
+# Version: 2.0
 
 # NOTA: 
 # Estos ejercicios son de mayor dificultad que los de clase y práctica.
@@ -12,58 +12,65 @@
 
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
 
-# Ejercicios con funciones y módulos
-import random
-
 '''
 Enunciado:
-Alumno: Crear la función "contar"
+Realice una calculadora:
+Dentro de un bucle se debe ingresar por línea de comando dos números
+Luego se ingresará como tercera entrada al programa el símbolo de la operación
+que se desea ejecutar:
+- Suma (+)
+- Resta (-)
+- Multiplicación (*)
+- División (/)
+- Exponente/Potencia (**)
+Se debe efectuar el cálculo correcto según la operación ingresada por consola
+Imprimir en pantalla la operación realizada y el resultado
 
-Utilice la función "lista_aleatoria" creada antes 
-para generar una lista de 5 números en
-un rango de 1 a 6 inclusive
+El programa se debe repetir dentro del bucle hasta que como operador
+se ingrese la palabra "FIN", en ese momento debe terminar el programa
 
-lista_numeros = lista_aleatoria(inicio, fin, cantidad)
-
-Generar una una nueva funcion que se llame "contar",
-que cuente la cantidad de veces que un número (pasado
-por parámetro a la función) se repite en la lista (también pasada por parámetro)
-
-Para saber cuantas veces se repiten el elemento pasado
-en la lista pueden usar el método nativo de list "count"
+Se debe debe imprimir un cartel de error si el operador ingresado no es
+alguno de lo soportados o no es la palabra "FIN".
 '''
 
-# --------------------------------
-# Aquí copiar la función "lista_aleatoria"
-# ya elaborada en el ejercicio anterior
+from pickle import TRUE
 
 
-# --------------------------------
+print("Mi Calculadora (^_^)")
+# Empezar aquí la resolución del ejercicio
 
-# --------------------------------
-# Aquí dentro definir la función contar
+while True:
+    nro1=float(input("ingrese el primer numero:\n")) 
+    nro2=float(input("ingrese el segundo numero:\n"))
+    print()
+    operacion=str(input("ingrese la operacion deseada:\n"
+    "suma (+)\n"
+    "Resta (-)\n"
+    "Multiplicacion (*)\n"
+    "Division (/)\n"
+    "Potencia (**)\n"
+    "Para salir ingrese FIN\n"))
+    if operacion == "+":
+        suma=nro1+nro2
+        print("El resultado de la suma es:", suma)
+    elif operacion=="-":
+        resta=nro1-nro2
+        print("El resultado de la resta es:", resta)
+    elif operacion=="*":
+        multiplicacion=nro1*nro2
+        print("El resultado de la multiplicacion es:", multiplicacion)
+    elif operacion=="/":
+        division=nro1/nro2
+        print("El resultado de la multiplicacion es:", division)
+    elif operacion=="**":
+        potencia=nro1**nro2
+        print("El resultado de la potencia es:", potencia)
+    elif operacion=="FIN":
+        break
+    else:
+        print("ingrese operador valido")
+print()
+print("Gracias por utilizar mi primer calculadora")
 
 
-# --------------------------------
-
-if __name__ == '__main__':
-    print("Bienvenidos a otra clase de Inove con Python")
-    
-    # Alumno: Utilizar la función "lista_aleatoria"
-    # para que genere una lista de 5 números que esten comprendidos
-    # entre los números 1 al 6 inclusive
-
-    # lista_numeros = lista_aleatoria(...)
-
-    # Imprimir en pantalla "lista_numeros" que tendrá
-    # los valores retornado por la función "lista_aleatoria":
-
-    # print(lista_numeros)
-
-    # Luego quiero averiguar cuantas veces se repite el numero 3
-    # en la lista aleatoria creada
-    # cantidad_tres = contar(lista_numeros, 3)
-
-    # print(cantidad_tres)
-
-    print("terminamos")
+#Intenté que rompa el ciclo antes de pedirme los primeros numeros, pero no me salió.
